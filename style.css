@@ -1,0 +1,219 @@
+/* --- Estilos Gerais --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+html { 
+    scroll-behavior: smooth; 
+} 
+body { 
+    background-color: #000; 
+    color: #fff; 
+}
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 5%; 
+}
+
+/* --- Cabeçalho --- */
+header { 
+    padding: 20px 0; 
+    background: rgba(0,0,0,0.95); 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 1px solid #222; 
+}
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 0 5%; 
+}
+.logo img { 
+    height: 75px; 
+    width: auto;
+}
+.nav-links { 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+.nav-links a { 
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: 500; 
+    transition: color 0.3s; 
+}
+.nav-links a:hover { 
+    color: #ff0000; 
+}
+.btn-orcamento { 
+    background: #ff0000; 
+    padding: 12px 25px; 
+    border-radius: 5px; 
+    font-weight: bold !important; 
+}
+
+/* --- Botão Flutuante WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* --- 1. Seção Hero (Principal) --- */
+.hero { 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
+    padding: 0 10%; 
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('fundo-carro.jpg') center/cover;
+    margin-top: 85px; 
+}
+.hero-content h1 { 
+    font-size: 4.5rem; 
+    color: #ff0000; 
+    margin-bottom: 20px; 
+    line-height: 1.1; 
+    font-weight: 800; 
+}
+.hero-content p { 
+    font-size: 1.8rem; 
+    margin-bottom: 40px; 
+    color: #eee; 
+    max-width: 700px;
+}
+.working-hours-card {
+    margin-bottom: 25px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+.working-hours-card i {
+    color: #ff0000;
+    margin-right: 8px;
+}
+.btn-main { 
+    background: #ff0000; 
+    color: #fff; 
+    padding: 18px 40px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    transition: background 0.3s; 
+    display: inline-block;
+}
+.btn-main:hover { 
+    background: #cc0000; 
+}
+
+/* --- 2. Seção "Quem Somos" --- */
+.about { padding: 100px 0; background-color: #111; }
+.about .container { display: flex; align-items: center; gap: 50px; }
+.about-text { flex: 1; }
+.about-text h2 { font-size: 3rem; color: #ff0000; margin-bottom: 30px; }
+.about-text p { font-size: 1.1rem; line-height: 1.8; color: #ccc; margin-bottom: 20px; }
+.about-image { flex: 1; }
+.about-image img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+/* --- 3. Seção "Nossos Serviços" (Atualizada com Dourado) --- */
+.services { 
+    padding: 100px 0; 
+    background-color: #000;
+}
+.services h2 { 
+    font-size: 3rem; 
+    text-align: center; 
+    margin-bottom: 50px; 
+    color: #fff; 
+}
+.services-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px; 
+}
+.service-card { 
+    background-color: #111; 
+    padding: 50px 30px; 
+    border-radius: 10px; 
+    text-align: center; 
+    border: 1px solid #222; 
+    transition: all 0.4s ease; 
+    position: relative;
+    overflow: hidden;
+}
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    transition: background 0.4s ease;
+}
+.service-card:hover { 
+    transform: translateY(-8px); 
+    border-color: #d4af37; 
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); 
+}
+.service-card:hover::before {
+    background: linear-gradient(90deg, #aa771c, #f3e5ab, #aa771c);
+}
+.service-card h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+.service-card:hover h3 {
+    color: #f3e5ab; 
+}
+.service-card p {
+    color: #aaa;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- 4. Seção "Contato" --- */
+.contact { padding: 100px 0; background-color: #111; }
+.contact h2 { font-size: 3rem; text-align: center; margin-bottom: 20px; color: #fff; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+.contact-card { background-color: #000; padding: 50px 30px; border-radius: 10px; text-align: center; border: 1px solid #222; }
+
+/* --- 5. Seção "Localização" --- */
+.location { padding: 100px 0; text-align: center; }
+
+/* --- Rodapé --- */
+footer { padding: 30px 0; background-color: #111; text-align: center; border-top: 1px solid #222; color: #777; }
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero { padding: 0 5%; margin-top: 70px; }
+}
